@@ -1,4 +1,4 @@
-﻿#region RDIFramework.NET-generated
+#region RDIFramework.NET-generated
 //------------------------------------------------------------------------------
 //	RDIFramework.NET，是基于.NET的快速信息化系统开发、整合框架，给用户和开发者最佳的.Net框架部署方案。
 //	RDIFramework.NET平台包含基础公共类库、强大的权限控制、模块分配、数据字典、自动升级、各商业级控件库、工作流平台、代码生成器、开发辅助
@@ -55,7 +55,7 @@ namespace RDIFramework.BizLogic
         /// <summary>
         /// id
         /// </summary>
-        public int? Id
+        public int? ID
         {
             get
             {
@@ -161,7 +161,7 @@ namespace RDIFramework.BizLogic
         /// <param name="dataRow">数据行</param>
         protected override BaseEntity GetFrom(IDataRow dataRow)
         {
-            this.Id = BusinessLogic.ConvertToNullableInt(dataRow[testdemoTable.FieldId]);
+            this.ID = BusinessLogic.ConvertToNullableInt(dataRow[testdemoTable.FieldID]);
             this.Name = BusinessLogic.ConvertToString(dataRow[testdemoTable.FieldName]);
             this.Tel = BusinessLogic.ConvertToString(dataRow[testdemoTable.FieldTel]);
             this.Addr = BusinessLogic.ConvertToString(dataRow[testdemoTable.FieldAddr]);
