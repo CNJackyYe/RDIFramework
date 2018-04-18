@@ -16,6 +16,32 @@
 
 7.在SOA里添加引用，添加一个服务
 
+8.调试bug
+
+```c#
+public ActionResult GridPageListJson(int page = 1, int rows = 20, string sort = "ID", string order = "desc", string filter = "")
+//修改参数调整排列标志sort
+```
+
+```c#
+public string AddEntity(testdemoEntity testdemoEntity)
+        {
+            string sequence = string.Empty;
+            SQLBuilder sqlBuilder = new SQLBuilder(DBProvider, this.Identity, this.ReturnId);
+            sqlBuilder.BeginInsert(this.CurrentTableName, testdemoTable.FieldID);
+//修改添加实体
+```
+
+```c#
+IDbProvider dbProvider
+        {
+            get
+            {  return DbFactoryProvider.GetProvider(SystemInfo.HisDbType,SystemInfo.HisDbConnection);
+            //调整数据库字段
+            }
+        }
+```
+
 ### 3.基于代码生成器生成MvcUI
 
 
