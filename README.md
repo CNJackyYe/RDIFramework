@@ -42,6 +42,45 @@ IDbProvider dbProvider
         }
 ```
 
+MVCUI问题总结
+
+```js
+function SetWebControls(data,isTop) {//自动给控件赋值过程中传入的key为大写
+    for (var key in data) {
+        var id = $('#' + key);        
+        var value = $.trim(data[key]).replace("&nbsp;", "");        
+        if (isTop) {
+            id = top.$('#' + key);
+        }}}
+```
+
+management存储过程修改
+
+```c#
+ public int UpdateEntity(testdemoEntity testdemoEntity)
+        {
+            SQLBuilder sqlBuilder = new SQLBuilder(DBProvider);
+            sqlBuilder.BeginUpdate(this.CurrentTableName);
+            this.SetEntity(sqlBuilder, testdemoEntity);
+            sqlBuilder.SetWhere(testdemoTable.FieldID,testdemoEntity.ID);
+            return sqlBuilder.EndUpdate();
+        }
+
+        /// <summary>
+        /// 设置实体
+        /// </summary>
+        /// <param name="sqlBuilder">sql语句生成器</param>
+        /// <param name="testdemoEntity">实体</param>
+        private void SetEntity(SQLBuilder sqlBuilder,testdemoEntity,testdemoEntity)
+        {///唯一标识id不能设置值 
+			sqlBuilder.SetValue(testdemoTable.FieldName,testdemoEntity.Name);
+			sqlBuilder.SetValue(testdemoTable.FieldTel,testdemoEntity.Tel);
+			sqlBuilder.SetValue(testdemoTable.FieldAddr,testdemoEntity.Addr);
+			sqlBuilder.SetValue(testdemoTable.FieldIdcard,testdemoEntity.Idcard);
+			sqlBuilder.SetValue(testdemoTable.FieldDellog,testdemoEntity.Dellog);
+        }
+
+```
 ### 3.基于代码生成器生成MvcUI
 
 1.直接选择表，生成代码
