@@ -1,4 +1,4 @@
-﻿#region RDIFramework.NET-generated
+#region RDIFramework.NET-generated
 //------------------------------------------------------------------------------
 //     RDIFramework.NET（.NET快速信息化系统开发、整合框架）是基于.NET的快速信息化系统开发、整合框架，给用户和开发者最佳的.Net框架部署方案。
 //     RDIFramework.NET平台包含基础公共类库、强大的权限控制、模块分配、数据字典、自动升级、各商业级控件库、工作流平台、代码生成器、开发辅助
