@@ -1,4 +1,4 @@
-﻿#region RDIFramework.NET-generated
+#region RDIFramework.NET-generated
 //------------------------------------------------------------------------------
 //	RDIFramework.NET，是基于.NET的快速信息化系统开发、整合框架，给用户和开发者最佳的.Net框架部署方案。
 //	RDIFramework.NET平台包含基础公共类库、强大的权限控制、模块分配、数据字典、自动升级、各商业级控件库、工作流平台、代码生成器、开发辅助
@@ -229,7 +229,7 @@ namespace RDIFramework.BizLogic
         /// <param name="testdemoEntity">实体</param>
         private void SetEntity(SQLBuilder sqlBuilder, testdemoEntity testdemoEntity)
         {
-            sqlBuilder.SetValue(testdemoTable.FieldId, testdemoEntity.Id);
+            sqlBuilder.SetValue(testdemoTable.FieldID, testdemoEntity.ID);
             sqlBuilder.SetValue(testdemoTable.FieldName, testdemoEntity.Name);
             sqlBuilder.SetValue(testdemoTable.FieldTel, testdemoEntity.Tel);
             sqlBuilder.SetValue(testdemoTable.FieldAddr, testdemoEntity.Addr);
