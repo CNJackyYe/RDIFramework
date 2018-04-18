@@ -81,6 +81,15 @@ management存储过程修改
         }
 
 ```
+关于关闭按钮无法触发
+```js
+//在hDialog里面添加cancel属性
+
+cancel: function () {   //加入这段代码才能关闭窗口
+                    hDialog.dialog('close');
+                    grid.reload();
+                }
+```
 ### 3.基于代码生成器生成MvcUI
 
 1.直接选择表，生成代码
