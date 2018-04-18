@@ -44,5 +44,5 @@ IDbProvider dbProvider
 
 ### 3.基于代码生成器生成MvcUI
 
-
+1.直接选择表，生成代码
 
